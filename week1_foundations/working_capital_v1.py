@@ -1,3 +1,9 @@
+"""
+Working Capital Analyzer
+Calculates DIO, DSO, DPO and Cash Conversion Cycle.
+Author: Ashutosh
+"""
+
 def safe_division(numerator, denominator):
     if denominator == 0:
         return 0
