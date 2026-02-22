@@ -27,19 +27,22 @@ def calculate_ccc(dio, dso, dpo):
 
 
 # Example test
-inventory = 500
-cogs = 1000
-receivables = 300
-revenue = 1200
-payables = 400
+if __name__ == "__main__":
+    print("\n--- Working Capital Analyzer ---")
 
-dio = calculate_dio(inventory, cogs)
-dso = calculate_dso(receivables, revenue)
-dpo = calculate_dpo(payables, cogs)
-ccc = calculate_ccc(dio, dso, dpo)
+    inventory = float(input("Enter Inventory value: "))
+    cogs = float(input("Enter COGS value: "))
+    receivables = float(input("Enter Accounts Receivable: "))
+    revenue = float(input("Enter Revenue: "))
+    payables = float(input("Enter Accounts Payable: "))
 
-print("\n--- Working Capital Metrics ---")
-print(f"DIO: {round(dio, 2)} days")
-print(f"DSO: {round(dso, 2)} days")
-print(f"DPO: {round(dpo, 2)} days")
-print(f"Cash Conversion Cycle: {round(ccc, 2)} days")
+    dio = calculate_dio(inventory, cogs)
+    dso = calculate_dso(receivables, revenue)
+    dpo = calculate_dpo(payables, cogs)
+    ccc = calculate_ccc(dio, dso, dpo)
+
+    print("\n--- Results ---")
+    print(f"DIO: {round(dio, 2)} days")
+    print(f"DSO: {round(dso, 2)} days")
+    print(f"DPO: {round(dpo, 2)} days")
+    print(f"Cash Conversion Cycle: {round(ccc, 2)} days")
